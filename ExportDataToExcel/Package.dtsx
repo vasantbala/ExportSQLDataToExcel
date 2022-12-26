@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="21"
-  DTS:VersionGUID="{89659D70-EDAE-48C8-B1B7-8344B8795504}">
+  DTS:VersionBuild="22"
+  DTS:VersionGUID="{1F2A9C2E-C163-45EC-A92E-3192293A860D}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -483,54 +483,6 @@ namespace ST_2e18585246af4700977b5bd252ed28e4
                 }
                 sqlConnection.Close();
             }
-
-            //string connectionString = Dts.Connections[sourceConnectionName].ConnectionString; //"Server=localhost;Database=SampleDB;User Id=gambit-sa;Password=gdsx4success;";
-            //using (SqlConnection sqlConnection = new SqlConnection(connectionString))
-            //using(SqlCommand cmd = sqlConnection.CreateCommand())
-            //using(SqlDataAdapter dataAdapter = new SqlDataAdapter(cmd))
-            //{
-            //    cmd.CommandText = sourceSQL;
-            //    cmd.CommandType = CommandType.Text;
-            //    cmd.Connection= sqlConnection;
-
-            //    DataTable dataTable = new DataTable();
-            //    dataAdapter.Fill(dataTable);
-
-
-            //    List<string> columnList = new List<string>();
-            //    StringBuilder column = new StringBuilder();
-            //    foreach (DataColumn col in dataTable.Columns)
-            //    {
-            //        columnList.Add($"{col.ColumnName} varchar");
-            //    }
-
-            //    using (OleDbConnection connection = new OleDbConnection(destinationExcelConnectionString))
-            //    {
-
-            //        connection.Open();
-
-            //        string tableCreateSql = $"create table {tableName} ({string.Join(", ", columnList)})";
-
-            //        execCommand(connection, tableCreateSql);
-
-            //        foreach (DataRow row in dataTable.Rows)
-            //        {
-            //            List<string> rowValueList = new List<string>();
-            //            for (int i = 0; i < dataTable.Columns.Count; i++)
-            //            {
-            //                rowValueList.Add($"'{row[i].ToString()}'");
-            //            }
-            //            string rowSql = $"insert into {tableName} values({string.Join(",", rowValueList)})";
-            //            execCommand(connection, rowSql);
-            //        }
-            //        //create table CompanyId varchar, Name varchar, City varchar, State varchar
-            //        //execCommand(connection, "create table Company (Id varchar,Name varchar,City varchar,State varchar)");
-            //        //execCommand(connection, "insert into Company values('1', 'Apple', 'Cupertino', 'TX')");
-            //    }
-
-            //    sqlConnection.Close();
-            //}
-
             Dts.TaskResult = (int)ScriptResults.Success;
 		}
 
@@ -576,7 +528,7 @@ namespace ST_2e18585246af4700977b5bd252ed28e4
     <msb:CodeName>ST_2e18585246af4700977b5bd252ed28e4</msb:CodeName>
     <msb:Language>msBuild</msb:Language>
     <msb:DisplayName>ST_2e18585246af4700977b5bd252ed28e4</msb:DisplayName>
-    <msb:ProjectId>{C9DAAA3B-36CC-4877-969A-D71F49228F85}</msb:ProjectId>
+    <msb:ProjectId>{37CDED73-F98A-469B-8ABE-8CA2C218641E}</msb:ProjectId>
   </msb:PropertyGroup>
   <msb:ItemGroup>
     <msb:Project Include="ST_2e18585246af4700977b5bd252ed28e4.csproj" />
@@ -588,12 +540,12 @@ namespace ST_2e18585246af4700977b5bd252ed28e4
     <msb:File Include="ScriptMain.cs" />
     <msb:Breakpoint Include="fe1138f8ce3e4f819f626ebd82e1bdff">
       <msb:FileName>ScriptMain.cs</msb:FileName>
+      <msb:LineNumber>168</msb:LineNumber>
       <msb:ColumnNumber>13</msb:ColumnNumber>
       <msb:Enabled>True</msb:Enabled>
-      <msb:LineNumber>216</msb:LineNumber>
+      <msb:ConditionType>1</msb:ConditionType>
       <msb:Condition>
       </msb:Condition>
-      <msb:ConditionType>1</msb:ConditionType>
       <msb:Language>C#</msb:Language>
       <msb:HitCountType>1</msb:HitCountType>
       <msb:HitCountTarget>1</msb:HitCountTarget>
@@ -710,7 +662,7 @@ namespace ST_2e18585246af4700977b5bd252ed28e4.Properties {
           <BinaryItem
             Name="ST_2e18585246af4700977b5bd252ed28e4.dll">TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
-ZGUuDQ0KJAAAAAAAAABQRQAATAEDAKTJqWMAAAAAAAAAAOAAIiALATAAABgAAAAIAAAAAAAA+jcA
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDAN7YqWMAAAAAAAAAAOAAIiALATAAABgAAAAIAAAAAAAA+jcA
 AAAgAAAAQAAAAAAAEAAgAAAAAgAABAAAAAAAAAAGAAAAAAAAAACAAAAAAgAAAAAAAAMAYIUAABAA
 ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAAKg3AABPAAAAAEAAAJAEAAAAAAAAAAAAAAAAAAAA
 AAAAAGAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -759,7 +711,7 @@ APkA/AYBABkBzAbXAKkAtQUGAKkADwXiADkBaAesAHEAtQUGAMEAtQUGAGkBLgHoAGkBWwfxAMkA
 tQX3AOkAtQUGAAgAFAARAQgAGAAWASkAcwCRAS4ACwBpAS4AEwByAS4AGwCRAS4AIwCaAS4AKwDD
 AS4AMwDDAS4AOwDJAS4AQwCaAS4ASwDVAS4AUwDDAS4AWwDyAUMAYwAWAUkAcwCRAWEAewAWAWMA
 awAWARsA0wDdAAMAAQAEAAMAAACTBVoBAAC7AV8BAAD0BmQBAgAGAAMAAgAHAAUAAQAIAAUAAgAJ
-AAcAmwAEgAAAAQAAAMsgkjoAAAAAAAAcAAAABAAAAAAAAAAAAAAA/wCYAAAAAAAQAAAAAAAAAAAA
+AAcAmwAEgAAAAQAAAMsgL0IAAAAAAAAcAAAABAAAAAAAAAAAAAAA/wCYAAAAAAAQAAAAAAAAAAAA
 AAAIAQAEAAAAAAQAAAAAAAAAAAAAAP8AegAAAAAABAAAAAAAAAAAAAAA/wChBAAAAAAQAAAAAAAA
 AAAAAAAIAVMAAAAAAAAAAAABAAAABgYAAAUAAgAAAABJRW51bWVyYWJsZWAxAExpc3RgMQBJbnQz
 MgBTVF8yZTE4NTg1MjQ2YWY0NzAwOTc3YjViZDI1MmVkMjhlNAA8TW9kdWxlPgBTeXN0ZW0uSU8A
@@ -809,7 +761,7 @@ AGEAcgBjAGgAYQByAAAFXwAxAAAPewAwAH0AXwB7ADEAfQAAAycAAT9pAG4AcwBlAHIAdAAgAGkA
 bgB0AG8AIAB7ADAAfQBfAHsAMQB9ACAAdgBhAGwAdQBlAHMAKAB7ADIAfQApAAADLAAAG2MAcgBl
 AGEAdABlACAAdABhAGIAbABlACAAAAUgACgAAAUsACAAAAMpAABxUwBUAF8AMgBlADEAOAA1ADgA
 NQAyADQANgBhAGYANAA3ADAAMAA5ADcANwBiADUAYgBkADIANQAyAGUAZAAyADgAZQA0AC4AUABy
-AG8AcABlAHIAdABpAGUAcwAuAFIAZQBzAG8AdQByAGMAZQBzAAAAQ/fmYp7vW0iNxtGcjmv2FwAE
+AG8AcABlAHIAdABpAGUAcwAuAFIAZQBzAG8AdQByAGMAZQBzAAAATsXwQFoxukSvcMcnPd42BAAE
 IAEBCAMgAAEFIAEBEREEIAEBDgUgAQERbSIHEw4ODggODg4RPRJBEkUSSRUSTQEOCAgIElEVEk0B
 Dg4IBCAAEn0FIAASgIEGIAESgIUcAyAAHAMgAA4EAAARPQQgAQ4OBwAEDg4ODg4FAAIODg4GAAMO
 Dg4OBSAAEoCVBiABEoCZHAQgABJFBiABARGAoQUgAQESQQQgABJJBRUSTQEOBCABDggFIAEBEwAD
@@ -827,14 +779,14 @@ AABQQURQQURQtAAAANA3AAAAAAAAAAAAAOo3AAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAADcNwAA
 AAAAAAAAAAAAAF9Db3JEbGxNYWluAG1zY29yZWUuZGxsAAAAAAD/JQAgABAAAAAAAAAAAAAAAAAA
 AAEAEAAAABgAAIAAAAAAAAAAAAAAAAAAAAEAAQAAADAAAIAAAAAAAAAAAAAAAAAAAAEAAAAAAEgA
 AABYQAAAMgQAAAAAAAAAAAAAMgQ0AAAAVgBTAF8AVgBFAFIAUwBJAE8ATgBfAEkATgBGAE8AAAAA
-AL0E7/4AAAEAAAABAJI6yyAAAAEAkjrLID8AAAAAAAAABAAAAAIAAAAAAAAAAAAAAAAAAABEAAAA
+AL0E7/4AAAEAAAABAC9CyyAAAAEAL0LLID8AAAAAAAAABAAAAAIAAAAAAAAAAAAAAAAAAABEAAAA
 AQBWAGEAcgBGAGkAbABlAEkAbgBmAG8AAAAAACQABAAAAFQAcgBhAG4AcwBsAGEAdABpAG8AbgAA
 AAAAAACwBJIDAAABAFMAdAByAGkAbgBnAEYAaQBsAGUASQBuAGYAbwAAAG4DAAABADAAMAAwADAA
 MAA0AGIAMAAAABoAAQABAEMAbwBtAG0AZQBuAHQAcwAAAAAAAAAuAAcAAQBDAG8AbQBwAGEAbgB5
 AE4AYQBtAGUAAAAAAFMAQQBQACAAUwBFAAAAAABwACQAAQBGAGkAbABlAEQAZQBzAGMAcgBpAHAA
 dABpAG8AbgAAAAAAUwBUAF8AMgBlADEAOAA1ADgANQAyADQANgBhAGYANAA3ADAAMAA5ADcANwBi
 ADUAYgBkADIANQAyAGUAZAAyADgAZQA0AAAAPgAPAAEARgBpAGwAZQBWAGUAcgBzAGkAbwBuAAAA
-AAAxAC4AMAAuADgAMwA5ADUALgAxADQAOQA5ADQAAAAAAHAAKAABAEkAbgB0AGUAcgBuAGEAbABO
+AAAxAC4AMAAuADgAMwA5ADUALgAxADYAOQA0ADMAAAAAAHAAKAABAEkAbgB0AGUAcgBuAGEAbABO
 AGEAbQBlAAAAUwBUAF8AMgBlADEAOAA1ADgANQAyADQANgBhAGYANAA3ADAAMAA5ADcANwBiADUA
 YgBkADIANQAyAGUAZAAyADgAZQA0AC4AZABsAGwAAABUABgAAQBMAGUAZwBhAGwAQwBvAHAAeQBy
 AGkAZwBoAHQAAABDAG8AcAB5AHIAaQBnAGgAdAAgAEAAIABTAEEAUAAgAFMARQAgADIAMAAyADIA
@@ -843,9 +795,9 @@ AGcAaQBuAGEAbABGAGkAbABlAG4AYQBtAGUAAABTAFQAXwAyAGUAMQA4ADUAOAA1ADIANAA2AGEA
 ZgA0ADcAMAAwADkANwA3AGIANQBiAGQAMgA1ADIAZQBkADIAOABlADQALgBkAGwAbAAAAGgAJAAB
 AFAAcgBvAGQAdQBjAHQATgBhAG0AZQAAAAAAUwBUAF8AMgBlADEAOAA1ADgANQAyADQANgBhAGYA
 NAA3ADAAMAA5ADcANwBiADUAYgBkADIANQAyAGUAZAAyADgAZQA0AAAAQgAPAAEAUAByAG8AZAB1
-AGMAdABWAGUAcgBzAGkAbwBuAAAAMQAuADAALgA4ADMAOQA1AC4AMQA0ADkAOQA0AAAAAABGAA8A
-AQBBAHMAcwBlAG0AYgBsAHkAIABWAGUAcgBzAGkAbwBuAAAAMQAuADAALgA4ADMAOQA1AC4AMQA0
-ADkAOQA0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AGMAdABWAGUAcgBzAGkAbwBuAAAAMQAuADAALgA4ADMAOQA1AC4AMQA2ADkANAAzAAAAAABGAA8A
+AQBBAHMAcwBlAG0AYgBsAHkAIABWAGUAcgBzAGkAbwBuAAAAMQAuADAALgA4ADMAOQA1AC4AMQA2
+ADkANAAzAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -864,7 +816,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
           <Breakpoint
             Enabled="True"
             File="ScriptMain.cs"
-            Line="216"
+            Line="168"
             Column="13" />
         </ScriptProject>
       </DTS:ObjectData>
