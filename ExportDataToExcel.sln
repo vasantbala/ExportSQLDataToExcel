@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33110.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{C9674DCB-5085-4A16-B785-4C70DD1589BD}") = "ExportDataToExcel", "ExportDataToExcel\ExportDataToExcel.dtproj", "{B60ADED7-44D3-4213-885F-34E1469714DC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Development|Any CPU = Development|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B60ADED7-44D3-4213-885F-34E1469714DC}.Debug|Any CPU.ActiveCfg = Development
+		{B60ADED7-44D3-4213-885F-34E1469714DC}.Debug|Any CPU.Build.0 = Development
+		{B60ADED7-44D3-4213-885F-34E1469714DC}.Development|Any CPU.ActiveCfg = Development
+		{B60ADED7-44D3-4213-885F-34E1469714DC}.Development|Any CPU.Build.0 = Development
+		{B60ADED7-44D3-4213-885F-34E1469714DC}.Release|Any CPU.ActiveCfg = Development
+		{B60ADED7-44D3-4213-885F-34E1469714DC}.Release|Any CPU.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0E702AE8-B428-45C4-B779-1DD3A079419A}
+	EndGlobalSection
+EndGlobal
